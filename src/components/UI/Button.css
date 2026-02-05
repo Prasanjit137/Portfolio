@@ -1,0 +1,44 @@
+.btn {
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  will-change: transform;
+  contain: layout style paint;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3B82F6 0%, #10B981 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2563EB 0%, #0D9488 100%);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #3B82F6;
+  border: 2px solid #3B82F6;
+}
+
+.btn-outline:hover {
+  background: rgba(59, 130, 246, 0.1);
+}

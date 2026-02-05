@@ -1,7 +1,6 @@
 import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 import { AiOutlineCalendar, AiOutlineEnvironment, AiOutlineUser } from 'react-icons/ai';
-import Card from '../UI/Card';
 import { RESUME_DATA } from '../../utils/constants';
 import './Experience.css';
 

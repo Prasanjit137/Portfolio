@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, interactive personal portfolio website built with React. Showcase your professional experience, projects, skills, and accomplishments in a sleek, responsive design.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Hero Section**: Eye-catching landing section with interactive 3D elements
+- **About**: Professional introduction and background
+- **Experience**: Timeline of work experience and career highlights
+- **Projects**: Showcase your best work with descriptions and links
+- **Skills**: Organized display of technical and professional skills
+- **Contact**: Easy-to-use contact form for potential employers and collaborators
+- **Responsive Design**: Looks great on desktop, tablet, and mobile devices
+- **Interactive UI**: Smooth animations and transitions with Aurora effects
+- **3D Elements**: Spline scene integration for enhanced visual appeal
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React.js
+- **Styling**: CSS3 with custom themes
+- **Animation**: Custom Aurora effects and CSS animations
+- **3D Graphics**: Spline embedded scenes
+- **Deployment**: Ready for GitHub Pages or any static hosting
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prerequisites
 
-### `npm test`
+- Node.js (v14 or higher)
+- npm or yarn package manager
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd portfolio
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Development
 
-### `npm run eject`
+Start the development server:
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will automatically reload when you make changes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Build
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Create an optimized production build:
+```bash
+npm run build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The build folder will contain the optimized production build ready for deployment.
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+src/
+├── components/
+│   ├── Layout/          # Header and footer components
+│   ├── Sections/        # Main page sections (Hero, About, Experience, etc.)
+│   └── UI/              # Reusable UI components (Card, Button, Aurora, etc.)
+├── assets/              # Images, documents, and media files
+├── hooks/               # Custom React hooks
+├── styles/              # Global styles and theme configuration
+├── utils/               # Helper functions and constants
+└── App.js              # Main application component
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Customization
 
-### Code Splitting
+### Update Theme
+Edit [src/styles/theme.js](src/styles/theme.js) to customize colors and styling.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Add Your Content
+- Update section components in `src/components/Sections/`
+- Add your projects, experience, and skills in relevant sections
+- Update constants in [src/utils/constants.js](src/utils/constants.js)
 
-### Analyzing the Bundle Size
+### Add Assets
+Place your images, resume, and certificates in `src/assets/`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Deployment
 
-### Making a Progressive Web App
+### Deploy to GitHub Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Update `homepage` in `package.json`:
+```json
+"homepage": "https://yourusername.github.io/portfolio"
+```
 
-### Advanced Configuration
+2. Build and deploy:
+```bash
+npm run build
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Deploy to Other Platforms
 
-### Deployment
+The `build/` folder is production-ready and can be deployed to:
+- Vercel
+- Netlify
+- AWS S3
+- Azure Static Web Apps
+- Any static hosting service
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Browser Support
 
-### `npm run build` fails to minify
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+This project is open source and available under the MIT License.
+
+## Author
+
+Prasanjit Sarkar
+
+---
+
+Feel free to fork this project and customize it for your own portfolio!

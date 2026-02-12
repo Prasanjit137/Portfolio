@@ -11,6 +11,7 @@ import Projects from './components/Sections/Projects';
 import Contact from './components/Sections/Contact';
 import './styles/global.css';
 import './App.css';
+import Chatbot from './components/Sections/Chatbot';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Projects />
         <Contact />
         <Footer />
+        <Chatbot />
       </main>
         
 

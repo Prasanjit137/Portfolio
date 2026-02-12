@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 import Spline from '@splinetool/react-spline';
-import { SPLINE_SCENE_URL } from '../../utils/constants';
 import './SplineScene.css';
 
 const SplineScene = () => {
@@ -41,7 +40,7 @@ const SplineScene = () => {
   return (
     <div className="spline-container">
       <Spline
-        scene={SPLINE_SCENE_URL}
+        scene={process.env.REACT_APP_SPLINE_SCENE_URL}
         onLoad={handleLoad}
         style={{
           position: 'fixed',

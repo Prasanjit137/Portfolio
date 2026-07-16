@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import './Chatbot.css';
 
 function Chatbot() {
@@ -63,7 +65,10 @@ function Chatbot() {
       
       setMessages((prev) => [...prev, aiMessage]);
     } catch (error) {
-      setMessages((prev) => [...prev, { text: "Network error. Please try again later.", sender: 'ai' }]);
+      setMessages((prev) => [...prev, { 
+        text: "Network error. Please try again later.", 
+        sender: 'ai' 
+      }]);
     } finally {
       setIsLoading(false);
     }
@@ -113,7 +118,25 @@ function Chatbot() {
               style={{ animationDelay: '0.1s' }}
             >
               <div className="message-bubble">
-                {msg.text}
+                {msg.sender === 'ai' ? (
+                  <ReactMarkdown 
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                      // Optional: customize rendered elements for styling
+                      code({node, inline, className, children, ...props}) {
+                        return (
+                          <code className={className} {...props}>
+                            {children}
+                          </code>
+                        );
+                      }
+                    }}
+                  >
+                    {msg.text}
+                  </ReactMarkdown>
+                ) : (
+                  msg.text
+                )}
                 {msg.time && <span className="message-time">{msg.time}</span>}
               </div>
             </div>
@@ -150,4 +173,3 @@ function Chatbot() {
 }
 
 export default Chatbot;
-

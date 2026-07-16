@@ -29,7 +29,7 @@ function Chatbot() {
     }
   }, [messages, isLoading, isOpen]);
 
-  const n8nWebhookUrl = process.env.REACT_APP_N8N_WEBHOOK_URL;
+  const WebhookUrl = process.env.REACT_APP_WEBHOOK_URL;
 
   const sendMessage = async (e) => {
     e.preventDefault();
@@ -43,7 +43,7 @@ function Chatbot() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(n8nWebhookUrl, {
+      const response = await fetch(WebhookUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
